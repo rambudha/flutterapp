@@ -18,10 +18,22 @@ class _RigoNepalState extends State<RigoNepal> {
         title: Text('Image Retainer'),
       ),
       body: Container(
+        padding:
+            EdgeInsets.only(left: 10.0, top: 30.0, right: 20, bottom: 10.8),
         child: Column(
           children: <Widget>[
             Text('Image Retentions'),
-            Image.asset('image/me.jpg')
+            Image.asset(
+              'image/me.jpg',
+              height: 150,
+              width: 250,
+            ),
+            TextField(
+                decoration: InputDecoration(
+                    labelText: 'Enter Name',
+                    hintText: 'Ryamsey Ryam',
+                    icon: Icon(Icons.people)),
+                keyboardType: TextInputType.number)
           ],
         ),
       ),
