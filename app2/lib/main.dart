@@ -11,6 +11,12 @@ class RigoNepal extends StatefulWidget {
 }
 
 class _RigoNepalState extends State<RigoNepal> {
+  bool _value = true;
+
+  void _onSwitchChange(bool val) {
+    setState(() => _value = val);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,7 +39,15 @@ class _RigoNepalState extends State<RigoNepal> {
                     labelText: 'Enter Name',
                     hintText: 'Ryamsey Ryam',
                     icon: Icon(Icons.people)),
-                keyboardType: TextInputType.number)
+                keyboardType: TextInputType.number),
+            Switch(value: _value, onChanged: _onSwitchChange),
+            SwitchListTile(
+              value: _value,
+              onChanged: _onSwitchChange,
+              activeColor: Colors.green,
+              subtitle: Text('Are you Nepalese'),
+              title: Text('Residents'),
+            )
           ],
         ),
       ),
