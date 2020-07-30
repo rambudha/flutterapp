@@ -28,7 +28,7 @@ class _MyMessagingAppState extends State<MyMessagingApp> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Messaage Me changes 1'),
+          title: Text('Messaage Me changes 12'),
           // centerTitle: true,
           // backgroundColor: themeColor,
         ),
